@@ -115,7 +115,7 @@ jobs:
         cd $OPENWRT_PATH
         echo "运行自定义脚本"
         ${GITHUB_WORKSPACE}/${DIY_SCRIPT}
-        ${GITHUB_WORKSPACE}/${PRESET_SCRIPT} #CLASH_KERNEL
+        echo "自定义脚本运行完毕"
 
     - name: Download DL Package(下载DL软件包)
       run: |
