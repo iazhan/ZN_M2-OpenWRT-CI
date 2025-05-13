@@ -34,6 +34,15 @@ git_sparse_clone main https://github.com/nikkinikki-org/OpenWrt-nikki nikki
 git_sparse_clone main https://github.com/nikkinikki-org/OpenWrt-nikki luci-app-nikki
 git_sparse_clone master https://github.com/sundaqiang/openwrt-packages luci-app-wolplus
 
+# 添加nikki
+# add feed
+echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+# update & install feeds
+./scripts/feeds update -a
+./scripts/feeds install -a
+# make package
+make package/luci-app-nikki/compile
+
 # git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 # git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app-ikoolproxy
@@ -126,5 +135,5 @@ git_sparse_clone master https://github.com/sundaqiang/openwrt-packages luci-app-
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
 
-./scripts/feeds update -a
-./scripts/feeds install -a
+# ./scripts/feeds update -a
+# ./scripts/feeds install -a
