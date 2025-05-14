@@ -30,8 +30,8 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-git_sparse_clone main https://github.com/nikkinikki-org/OpenWrt-nikki nikki
-git_sparse_clone main https://github.com/nikkinikki-org/OpenWrt-nikki luci-app-nikki
+# git_sparse_clone main https://github.com/nikkinikki-org/OpenWrt-nikki nikki
+# git_sparse_clone main https://github.com/nikkinikki-org/OpenWrt-nikki luci-app-nikki
 git_sparse_clone master https://github.com/sundaqiang/openwrt-packages luci-app-wolplus
 
 # 添加nikki
