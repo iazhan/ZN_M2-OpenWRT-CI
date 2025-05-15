@@ -134,5 +134,5 @@ make package/luci-app-nikki/compile
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
 
-# ./scripts/feeds update -a
-# ./scripts/feeds install -a
+./scripts/feeds update -a
+./scripts/feeds install -a
